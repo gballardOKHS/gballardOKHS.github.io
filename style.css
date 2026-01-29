@@ -1,6 +1,6 @@
 body {
-    background: #326771;
-    color: rgb(45, 45, 45);
+    background: #9f9f92;
+    color: rgb(45, 45, 45); 
     padding: 10px;
     font-family: Arial, sans-serif;
 }
@@ -13,6 +13,7 @@ body {
 /* navigation menu */
 nav {
     background: rgb(100, 12, 12);
+    border: 14px rgb(100, 12, 12) ridge;
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -45,7 +46,8 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background: #d7be82;
+    border: 10px #28464b groove;
     display: flex;
     margin-top: 20px;
 }
@@ -56,7 +58,8 @@ main {
 }
 
 .sidebar-img {
-    width: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 .content {
@@ -66,7 +69,7 @@ main {
 
 /* interests section styles */
 #interests {
-    border: 4px silver ridge;
+    border: 4px #28464b ridge;
     padding: 8px;
     margin-top: 20px;
 }
