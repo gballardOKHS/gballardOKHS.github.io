@@ -1,12 +1,13 @@
 body {
-    background: #9f9f92;
+    background-image: linear-gradient(to top right, #4e6e58, #544b3d, #4c8577);
     color: rgb(45, 45, 45); 
-    padding: 10px;
+    padding: 75px;
     font-family: Arial, sans-serif;
 }
 
 #all-contents {
-    max-width: 800px;
+    max-width: 900px;
+    height: 900px;
     margin: auto;
 }
 
@@ -58,6 +59,7 @@ main {
 }
 
 .sidebar-img {
+    border: 6px #798071 ridge;
     width: 300px;
     height: 300px;
 }
@@ -69,11 +71,38 @@ main {
 
 /* interests section styles */
 #interests {
-    border: 4px #28464b ridge;
+    border: 6px #28464b ridge;
     padding: 8px;
     margin-top: 20px;
 }
 
 h2, h3 {
     margin: 0px;
+}
+
+/* Portfolio styles */
+.content h1 {
+  color: #536271;
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #70161E;
+  border: 4px #70161E ridge;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #eee;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #798071;
 }
