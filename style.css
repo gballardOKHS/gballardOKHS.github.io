@@ -1,5 +1,8 @@
 body {
-    background-image: linear-gradient(to top right, #4e6e58, #544b3d, #4c8577);
+    background-image: linear-gradient(to top right, #70161E, #7A7D7D, #023618);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: rgb(45, 45, 45); 
     padding: 75px;
     font-family: Arial, sans-serif;
@@ -9,6 +12,7 @@ body {
     max-width: 900px;
     height: 900px;
     margin: auto;
+    padding: 10px
 }
 
 /* navigation menu */
@@ -18,6 +22,7 @@ nav {
     margin: 0 auto;
     display: flex;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -51,6 +56,7 @@ main {
     border: 10px #28464b groove;
     display: flex;
     margin-top: 20px;
+    min-width: 500px;
 }
 
 .sidebar {
