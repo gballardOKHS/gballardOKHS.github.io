@@ -39,12 +39,29 @@ $(function () {
     createPlatform (150, 350, 3, 3);
     createPlatform (500, 500, 20, 700);
     createPlatform (350, 600, 20, 20);
-    createPlatform (450, 500, 50, 20);
+    createPlatform (510, 500, 50, 20);
     createPlatform (500, 350, 20, 150, "lightBlue");
     createPlatform (500, 150, 20, 200);
-    createPlatform (450, 150, 50, 20, "red");
-    createPlatform (300, 250, 25, 20, "red");
-    createPlatform ();
+    createPlatform (450, 150, 50, 20, "lightBlue");
+    createPlatform (450, 150, 3, 3);
+    createPlatform (300, 250, 25, 20, "lightBlue");
+    createPlatform (300, 250, 1, 1);
+    createPlatform (430, 550, 10, 20);
+    createPlatform (600, 600, 100, 20);
+    createPlatform (800, 700, 50, 20);
+    createPlatform (800, 700, 20, 50);
+    createPlatform (1350, 450, 50, 20);
+    createPlatform (1355, 350, 50, 20);
+    createPlatform (1360, 250, 50, 20);
+    createPlatform (1000, 600, 100, 20);
+    createPlatform (800, 475, 50, 20);
+    createPlatform (780, 425, 20, 70);
+    createPlatform (1000, 200, 20, 200);
+    createPlatform (1000, 380, 100, 20);
+    createPlatform (1100, 200, 20, 200);
+    createPlatform (1200, 500, 50, 20);
+    createPlatform (950, 380, 50, 20);
+    createPlatform (950, 280, 50, 20);
     createPlatform ();
     createPlatform ();
     createPlatform ();
@@ -52,7 +69,9 @@ $(function () {
 
 
     // TODO 3 - Create Collectables
-
+    createCollectable ("database", 0, 400);
+    createCollectable ("database", 520, 460);
+    creareCollectable ("database", 1300, 100);
 
 
     
