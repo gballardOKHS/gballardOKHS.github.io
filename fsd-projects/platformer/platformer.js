@@ -27,58 +27,55 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    toggleGrid();
 
+    //toggleGrid();
 
     // TODO 2 - Create Platforms
-    createPlatform (0, 700, 100, 20);
-    createPlatform (100, 525, 25, 20);
-    createPlatform (200, 650, 50, 20);
-    createPlatform (0, 450, 10, 20);
-    createPlatform (150, 350, 20, 20, "lightBlue");
-    createPlatform (150, 350, 3, 3);
-    createPlatform (500, 500, 20, 700);
-    createPlatform (350, 600, 20, 20);
-    createPlatform (510, 500, 50, 20);
-    createPlatform (500, 350, 20, 150, "lightBlue");
-    createPlatform (500, 150, 20, 200);
-    createPlatform (450, 150, 50, 20, "lightBlue");
-    createPlatform (450, 150, 3, 3);
-    createPlatform (300, 250, 25, 20, "lightBlue");
-    createPlatform (300, 250, 1, 1);
-    createPlatform (430, 550, 10, 20);
-    createPlatform (600, 600, 100, 20);
-    createPlatform (800, 700, 50, 20);
-    createPlatform (800, 700, 20, 50);
-    createPlatform (1350, 450, 50, 20);
-    createPlatform (1355, 350, 50, 20);
-    createPlatform (1360, 250, 50, 20);
-    createPlatform (1000, 600, 100, 20);
-    createPlatform (800, 475, 50, 20);
-    createPlatform (780, 425, 20, 70);
-    createPlatform (1000, 200, 20, 200);
-    createPlatform (1000, 380, 100, 20);
-    createPlatform (1100, 200, 20, 200);
-    createPlatform (1200, 500, 50, 20);
-    createPlatform (950, 380, 50, 20);
-    createPlatform (950, 280, 50, 20);
-    createPlatform ();
-    createPlatform ();
-    createPlatform ();
 
-
+    createPlatform(0, 700, 100, 20);
+    createPlatform(100, 525, 25, 20);
+    createPlatform(200, 650, 50, 20);
+    createPlatform(0, 450, 10, 20);
+    createPlatform(150, 350, 20, 20, "lightBlue");
+    createPlatform(150, 350, 3, 3);
+    createPlatform(500, 500, 20, 700);
+    createPlatform(350, 600, 20, 20);
+    createPlatform(510, 500, 50, 20);
+    createPlatform(500, 350, 20, 150, "lightBlue");
+    createPlatform(500, 150, 20, 200);
+    createPlatform(450, 150, 50, 20, "lightBlue");
+    createPlatform(450, 150, 3, 3);
+    createPlatform(300, 250, 25, 20, "lightBlue");
+    createPlatform(300, 250, 3, 3);
+    createPlatform(430, 550, 10, 20);
+    createPlatform(600, 600, 100, 20);
+    createPlatform(800, 700, 50, 20);
+    createPlatform(800, 700, 20, 50);
+    createPlatform(1360, 450, 50, 15);
+    createPlatform(1370, 330, 45, 15);
+    createPlatform(1380, 210, 40, 15);
+    createPlatform(1000, 600, 100, 20);
+    createPlatform(800, 475, 50, 20);
+    createPlatform(780, 425, 20, 70);
+    createPlatform(1000, 200, 20, 200);
+    createBadPlatform(1020, 380, 80, 20);
+    createPlatform(1100, 200, 20, 200);
+    createPlatform(1200, 500, 50, 20);
+    createPlatform(950, 380, 50, 20);
+    createPlatform(970, 250, 30, 20);
 
     // TODO 3 - Create Collectables
-    createCollectable ("database", 0, 400);
-    createCollectable ("database", 520, 460);
-    creareCollectable ("database", 1300, 100);
 
-
+    createCollectable("duck", 0, 400);
+    createCollectable("duck", 520, 460);
+    createCollectable("duck", 1357, 50);
+    createCollectable("duck", 1030, 300);
     
     // TODO 4 - Create Cannons
 
-
-    
+    createCannon("right", 800, 5);
+    createCannon("bottom", 500, 900);
+    createCannon("bottom", 300, 600);
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
