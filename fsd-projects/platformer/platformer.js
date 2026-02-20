@@ -32,37 +32,37 @@ $(function () {
 
     // TODO 2 - Create Platforms
 
-    createPlatform(0, 700, 100, 20);
-    createPlatform(100, 525, 25, 20);
-    createPlatform(200, 650, 50, 20);
-    createPlatform(0, 450, 10, 20);
-    createPlatform(150, 350, 20, 20, "lightBlue");
-    createPlatform(150, 350, 3, 3);
-    createPlatform(500, 500, 20, 700);
-    createPlatform(350, 600, 20, 20);
-    createPlatform(510, 500, 50, 20);
-    createPlatform(500, 350, 20, 150, "lightBlue");
-    createPlatform(500, 150, 20, 200);
-    createPlatform(450, 150, 50, 20, "lightBlue");
-    createPlatform(450, 150, 3, 3);
-    createPlatform(300, 250, 25, 20, "lightBlue");
-    createPlatform(300, 250, 3, 3);
-    createPlatform(430, 550, 10, 20);
-    createPlatform(600, 600, 100, 20);
-    createPlatform(800, 700, 50, 20);
-    createPlatform(800, 700, 20, 50);
-    createPlatform(1360, 450, 50, 15);
-    createPlatform(1370, 330, 45, 15);
-    createPlatform(1380, 210, 40, 15);
-    createPlatform(1000, 600, 100, 20);
-    createPlatform(800, 475, 50, 20);
-    createPlatform(780, 425, 20, 70);
-    createPlatform(1000, 200, 20, 200);
-    createBadPlatform(1020, 380, 80, 20);
-    createPlatform(1100, 200, 20, 200);
-    createPlatform(1200, 500, 50, 20);
-    createPlatform(950, 380, 50, 20);
-    createPlatform(970, 250, 30, 20);
+    createPlatform(0, 700, 100, 20, "darkBlue");
+    createPlatform(100, 525, 25, 20, "darkBlue");
+    createPlatform(200, 650, 50, 20, "darkBlue");
+    createPlatform(0, 450, 10, 20, "darkBlue");
+    createPlatform(150, 350, 20, 20, "black");
+    createPlatform(150, 350, 3, 3, "darkBlue");
+    createPlatform(500, 500, 20, 700, "darkBlue");
+    createPlatform(350, 600, 20, 20, "darkBlue");
+    createPlatform(510, 500, 50, 20, "darkBlue");
+    createPlatform(500, 350, 20, 150, "black");
+    createPlatform(500, 150, 20, 200, "darkBlue");
+    createPlatform(450, 150, 50, 20, "black");
+    createPlatform(450, 150, 3, 3, "darkBlue");
+    createPlatform(300, 250, 25, 20, "black");
+    createPlatform(300, 250, 3, 3, "darkBlue");
+    createPlatform(430, 550, 10, 20, "darkBlue");
+    createPlatform(600, 600, 100, 20, "darkBlue");
+    createPlatform(800, 700, 50, 20, "darkBlue");
+    createPlatform(800, 700, 20, 50, "darkBlue");
+    createPlatform(1360, 450, 50, 15, "darkBlue");
+    createPlatform(1370, 330, 45, 15, "darkBlue");
+    createPlatform(1380, 210, 40, 15, "darkBlue");
+    createPlatform(1000, 600, 100, 20, "darkBlue");
+    createPlatform(800, 475, 50, 20, "darkBlue");
+    createPlatform(780, 425, 20, 70, "darkBlue");
+    createPlatform(1000, 200, 20, 200, "darkBlue");
+    createBadPlatform(1020, 380, 80, 20, "darkBlue");
+    createPlatform(1100, 200, 20, 200, "darkBlue");
+    createPlatform(1200, 500, 50, 20, "darkBlue");
+    createPlatform(950, 380, 50, 20, "darkBlue");
+    createPlatform(970, 250, 30, 20, "darkBlue");
 
     // TODO 3 - Create Collectables
 
