@@ -8,7 +8,12 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        height: 180px;
+			  background-image: url(duck.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%; 
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -20,8 +25,12 @@
       }
 
       .board {
-        height: 100vh;
-        background-color: #3d3b3c;
+        height: 5vh;
+        background-image: url("https://garden.spoonflower.com/c/20188456/p/f/m/Vx8ukEFrwTXYGArMHHB_ZDSBINrti_CCXpUJYIWesYmQd-jbwn3tLJOEdw/Classic%20Vintage%2080s%20Rugged%20Bear%20Camo%20Desert%20Sand.jpg");
+      background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -46,14 +55,17 @@
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
-          boardHeight = board.height();
         });
 
         // Every 50 milliseconds, call the update Function (see below)
         setInterval(update, 50);
-
+        
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
+        board.on('click', handleMisClick);
+        if (good === false) {
+          box.off('click', handleBoxClick)
+        }
 
         // moves the Box to a new position on the screen along the X-Axis
         function moveBoxTo(newPositionX, newPositionY) {
@@ -72,13 +84,15 @@
 
         // TODO 2 - Variable declarations
         var positionX = 0;
-        var positionY = 0;
+        var positionY = 0.1;
+        var speedY = 10;
         var points = 0;
         var speed = 10;
         var boardHeight = jQuery(window).height();
         var randNum = Math.random() * boardWidth;
-
-
+        var colorStr = "rgb(50, 25, 250)";
+        var interval = setInterval(update, 50);
+        var good = true;
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
@@ -87,18 +101,18 @@
         function update() {
           moveBoxTo(positionX, positionY);
           positionX += speed;
-          positionY += speed;
+          positionY += speedY;
           if (positionX >= boardWidth) {
             speed *= -1;
           }
           if (positionX < 0) {
             speed *= -1;
           }
-          if (positionY >= boardHeight){
-            speed *= -1;
+          if (positionY > boardHeight){
+            speedY = speedY * -1;
           }
           if (positionY < 0){
-            speed *= -1;
+            speedY = speedY * -1;
           }
 
         }
@@ -112,13 +126,27 @@
          */
         function handleBoxClick() {
           positionX = randNum
-          positionY = randNum
+          positionY = 10
           changeBoxText(points)
           points++;
           speed = 3 * points + 10
+          speedY = 3 * points + 10
+
+
 
         }
 
+        function endGame() {
+          clearInterval(interval);
+          good = false;
+
+        }
+        function handleMisClick() {
+          fails = fails + 1;
+          if (fails === 10) {
+            endgame();
+          }
+        }
 
         
       })();
