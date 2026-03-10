@@ -85,7 +85,7 @@
         // TODO 2 - Variable declarations
         var positionX = 0;
         var positionY = 0.1;
-        var speedY = 10;
+        var speedY = 5;
         var points = 1;
         var speed = 10;
         var boardHeight = jQuery(window).height();
@@ -106,13 +106,13 @@
           if (positionX >= boardWidth) {
             speed *= -1;
           }
-          if (positionX < 0) {
+          else if (positionX < 0) {
             speed *= -1;
           }
           if (positionY > boardHeight) {
             speedY = speedY * -1;
           }
-          if (positionY < 0) { 
+          else if (positionY < 0) { 
             speedY = speedY * -1;
           }
 
@@ -126,12 +126,12 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-          positionX = randNum
-          positionY = 10
-          changeBoxText(points)
-          points++;
-          speed = 3 * points + 10
-          speedY = 3 * points + 10
+          positionX = randNum;
+          positionY = 10;
+          changeBoxText(points);
+          points++;;
+          speed = 3 * points + 10;
+          speedY = 3 * points + 10;
         }
         
         function handleMisclick() {
@@ -145,8 +145,6 @@
         function endGame() {
           clearInterval(interval);
           condition = true;
-
-
         }
         }
 
