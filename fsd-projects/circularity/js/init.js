@@ -34,12 +34,12 @@ var init = function (window) {
 
         // Initialize gamification features (unlocked after completing educational TODOs)
      Gamification.init({
-     canvas: canvas,
-     view: view,
-     draw: draw,
-     physikz: physikz,
-     circles: circles,
-     game: game
+        canvas: canvas,
+        view: view,
+        draw: draw,
+        physikz: physikz,
+        circles: circles,
+        game: game
      });
 
 
@@ -85,21 +85,18 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
+            if (circle.x > canvas.width) {
                 circle.x = 0;
             }
-            
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            else if ( circle.x < 0 ) {
-                circle.x = canvas.width
+            else if (circle.x < 0) {
+                circle.x = canvas.width;
             }            
-            if ( circle.y > canvas.height ) {
+            if (circle.y > canvas.height) {
                 circle.y = 0;
-            } else if ( circle.y < 0 ) {
+            } else if (circle.y < 0) {
                 circle.y = canvas.height;
             }
-
-            
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
