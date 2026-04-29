@@ -33,14 +33,14 @@ var init = function (window) {
         }
 
         // Initialize gamification features (unlocked after completing educational TODOs)
-     Gamification.init({
+      Gamification.init({
         canvas: canvas,
         view: view,
         draw: draw,
         physikz: physikz,
         circles: circles,
         game: game
-     });
+      });
 
 
         // TODO 3 : Call the drawCircle() function
