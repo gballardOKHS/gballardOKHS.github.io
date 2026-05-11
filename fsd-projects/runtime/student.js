@@ -1,20 +1,50 @@
 function moveScenery() {  
 // TODO 2: Move background scenery based on current level speed
- for (var i = 0; i < building.instances.length; i++) {
-  
- }
-}
+ var buildingInstance;
+  for (var i = 0; i < scenery.building.instances.length; i++) {
+    buildingInstance = scenery.building.instances[i];
+    buildingInstance.x += buildingInstance.speedX - currentLevel.speed;
+    if (buildingInstance.x + buildingInstance.width < 0) {
+      buildingInstance.x = scenery.building.loopWidth;
+    }
+  }
+  var lampInstance;
+  for (var i = 0; i < scenery.lamp.instances.length; i++) {
+    lampInstance = scenery.lamp.instances[i];
+    lampInstance.x += lampInstance.speedX - currentLevel.speed;
+    if (lampInstance.x + lampInstance.width < 0) {
+      lampInstance.x = scenery.lamp.loopWidth;
+    }
 
+  }
+}
 function generateLevel() {
   // TODO 3: Generate the current level's game objects
+  var currentObject;
+  for (var i = 0; i < currentLevel.gameObjects.length; i++) {
+    currentObject = currentLevel.gameObjects[i];
+    create(currentObject);
+  }
 }
 
 function create(obj) {
   // TODO 4: Create a game object based on its type and kind
+  if (obj.type === "obstacle") {
+    makeObstacle();
+  } else if (obj.type === "enemy") {
+    makeEnemy();
+  } else if (obj.type === "powerup") {
+    makePowerup();
+  } else if (obj.type === "goal") {
+    makeGoal();
+  } else if (obj.type === "platform") {
+    makePlatform();
+  }
 }
 
 function filterObjects(type) {
   // TODO 5: Return only the game objects of the specified type
+  var matches = [];
 }
 
 function moveGameObjects(objectList) {
