@@ -45,10 +45,17 @@ function create(obj) {
 function filterObjects(type) {
   // TODO 5: Return only the game objects of the specified type
   var matches = [];
+  for (var i = 0; i < gameObjects.length; i++) {
+    if (type === obj.type) {
+      matches.push(i);
+    }
+  }
+  return matches;
 }
 
 function moveGameObjects(objectList) {
   // TODO 6: Move all game objects of a single type based on speeds
+  
 }
 
 function handleProjectileCollisions() {
