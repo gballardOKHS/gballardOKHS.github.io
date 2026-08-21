@@ -67,7 +67,16 @@ $(document).ready(function () {
   }
 
   // TODO 5-a: add a function that handles the bad display type
+  /*
   function handleBad(data, repeat) {
+    repeat += 1;
+    setBackgroundWithMixed(data, repeat);
+    animationDetails.displayType = 3;
+  }
+  */
+  function handleBad(data, repeat) {
+    currentIndex = Math.floor(Math.random() * dataShapes.length - 1);
+    resetDisplay();
     repeat += 1;
     setBackgroundWithMixed(data, repeat);
     animationDetails.displayType = 3;
