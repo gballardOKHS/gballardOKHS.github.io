@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to top right, #70161E, #7A7D7D, #023618);
+    background-image: linear-gradient(to top right, #0b3142, #0f5257, #839073);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -17,8 +17,8 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(100, 12, 12);
-    border: 14px rgb(100, 12, 12) ridge;
+    background: #646f4b;
+    border: 14px #646f4b ridge;
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -28,7 +28,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: #ab8f7a;
     flex: 1;
     margin: 0;
 }
@@ -47,12 +47,12 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #c3a995;
 }
 
 /* main container area beneath menu */
 main {
-    background: #d7be82;
+    background: #cdc6a5;
     border: 10px #28464b groove;
     display: flex;
     margin-top: 20px;
@@ -88,7 +88,7 @@ h2, h3 {
 
 /* Portfolio styles */
 .content h1 {
-  color: #536271;
+  color: black;
 }
 
 #portfolio {
@@ -97,18 +97,18 @@ h2, h3 {
 }
 
 #portfolio li {
-  background: #70161E;
-  border: 4px #70161E ridge;
+  background: #646f4b;
+  border: 4px #646f4b ridge;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 #portfolio li:hover {
-  background: #eee;
+  background: #8a9a67;
 }
 
 #portfolio a {
   text-decoration: none;
-  color: #798071;
+  color: #c3a995;
 }
