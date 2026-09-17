@@ -8,6 +8,7 @@ $(document).ready(function () {
    .css("top", 50)
    .css("left", 50)
    .appendTo("#die");
+
 $("<div>")
   .css("height", 15)
    .css("width", 15)
@@ -61,12 +62,15 @@ $("<div>")
       makeDot(25, 25, dieID); // bottom left
     }
   }
+
   function handleClick() {
     rollDie("#die");
   }
+
   function handleClick2() {
     rollDie("#die2")
   }
+  
   $("#die").on("click", handleClick);
   $("#die2").on("click", handleClick2);
 });
