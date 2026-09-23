@@ -4,8 +4,8 @@ $(document).ready(function () {
   /////////////////
 
   // this section initializes some variables that will be used throughout the program
-  var doubleMaxSpeed = 5;
-  var maxGhosts = 10;
+  var doubleMaxSpeed = 10;
+  var maxGhosts = 20;
   var $board = $("#board");
   var boardWidth = $($board).width();
   var boardHeight = $($board).height();
@@ -46,14 +46,18 @@ $(document).ready(function () {
     // this creates some useful variables that are not directly placed in the object
     var maxX = boardWidth - ghostRadius * 2;
     var maxY = boardHeight - ghostRadius * 2;
-
+    var $ghost = $(".ghost");
     // this gives the ghost object all of the data that it needs to store
     ghost.id = "#" + id;
-    ghost.x = Math.random() * maxX + ghostRadius;
-    ghost.y = Math.random() * maxY + ghostRadius;
+    ghost.x = (Math.random() * maxX + ghostRadius) < boardWidth;
+    ghost.y = (Math.random() * maxY + ghostRadius) < boardHeight;
     ghost.speedX = decideSpeed();
     ghost.speedY = decideSpeed();
-
+    ghost.width = 50
+    ghost.height = 50
+    ghost.rightX = ghost.x + ghost.width;
+    ghost.bottomY = ghost.y + ghost.height;
+    console.log(ghost.width, ghost.height);
     // assign a random color for the ghost's glow
     const colors = [
       "#00f",
@@ -130,6 +134,8 @@ $(document).ready(function () {
   function moveGhost(ghost) {
     ghost.x += ghost.speedX;
     ghost.y += ghost.speedY;
+    ghost.rightX += ghost.speedX;
+    ghost.bottomY += ghost.speedY;
   }
 
   // this bounces ghosts if they hit a wall
@@ -140,7 +146,7 @@ $(document).ready(function () {
       ghost.speedX *= -1;
     }
     // this bounces off the right wall
-    else if (ghost.x > boardWidth) {
+    else if (ghost.rightX > boardWidth) {
       ghost.x -= ghost.speedX;
       ghost.speedX *= -1;
     }
@@ -150,7 +156,7 @@ $(document).ready(function () {
       ghost.speedY *= -1;
     }
     // this bounces off the bottom wall
-    else if (ghost.y > boardHeight) {
+    else if (ghost.bottomY >= boardHeight) {
       ghost.y -= ghost.speedY;
       ghost.speedY *= -1;
     }

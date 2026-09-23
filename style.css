@@ -52,8 +52,8 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: #cdc6a5;
-    border: 10px #28464b groove;
+    background: #565857;
+    border: 10px #004346 groove;
     display: flex;
     margin-top: 20px;
     min-width: 500px;
@@ -65,7 +65,7 @@ main {
 }
 
 .sidebar-img {
-    border: 6px #798071 ridge;
+    border: 6px #004346 ridge;
     width: 300px;
     height: 300px;
 }
