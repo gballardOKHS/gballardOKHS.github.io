@@ -57,7 +57,6 @@ $(document).ready(function () {
     ghost.height = 50
     ghost.rightX = ghost.x + ghost.width;
     ghost.bottomY = ghost.y + ghost.height;
-    console.log(ghost.width, ghost.height);
     // assign a random color for the ghost's glow
     const colors = [
       "#00f",
