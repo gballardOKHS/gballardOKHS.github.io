@@ -5,8 +5,8 @@ $(document).ready(function () {
    .css("width", 15)
    .css("background-color","black")
    .css("position","absolute")
-   .css("top", 50)
-   .css("left", 50)
+   .css("top", 45)
+   .css("left", 45)
    .appendTo("#die");
 
 $("<div>")
@@ -14,8 +14,8 @@ $("<div>")
    .css("width", 15)
    .css("background-color","black")
    .css("position","absolute")
-   .css("top", 50)
-   .css("left", 50)
+   .css("top", 45)
+   .css("left", 45)
    .appendTo("#die2");
 
   function makeDot(top, left, elementID) {
@@ -34,32 +34,32 @@ $("<div>")
     var randomNum = Math.ceil(Math.random() * 6);
     console.log(randomNum);
     if (randomNum === 1) {
-      makeDot(50, 50, dieID); // middle middle
+      makeDot(45, 45, dieID); // middle middle
     } else if (randomNum === 2) {
-      makeDot(25, 25, dieID); // top left
-      makeDot(75, 75, dieID); // bottom right
+      makeDot(20, 20, dieID); // top left
+      makeDot(70, 70, dieID); // bottom right
     } else if (randomNum === 3) {
-      makeDot(25, 25, dieID); // top left
-      makeDot(75, 75, dieID); // bottom right
-      makeDot(50, 50, dieID); // middle middle
+      makeDot(20, 20, dieID); // top left
+      makeDot(70, 70, dieID); // bottom right
+      makeDot(45, 45, dieID); // middle middle
     } else if (randomNum === 4) {
-      makeDot(75, 75, dieID); // bottom right
-      makeDot(25, 25, dieID); // top left
-      makeDot(25, 75, dieID); // bottom left
-      makeDot(75, 25, dieID); // top right
+      makeDot(70, 70, dieID); // bottom right
+      makeDot(20, 20, dieID); // top left
+      makeDot(20, 70, dieID); // bottom left
+      makeDot(70, 20, dieID); // top right
     } else if (randomNum === 5) {
-      makeDot(50, 50, dieID); // middle middle
-      makeDot(75, 75, dieID); // bottom right
-      makeDot(25, 25, dieID); // top left
-      makeDot(25, 75, dieID); // bottom left
-      makeDot(75, 25, dieID); // top right
+      makeDot(45, 45, dieID); // middle middle
+      makeDot(70, 70, dieID); // bottom right
+      makeDot(20, 20, dieID); // top left
+      makeDot(20, 70, dieID); // bottom left
+      makeDot(70, 20, dieID); // top right
     } else if (randomNum === 6) {
-      makeDot(75, 75, dieID); // bottom right
-      makeDot(50, 25, dieID); // middle right
-      makeDot(75, 25, dieID); // bottom right
-      makeDot(25, 75, dieID); // top left 
-      makeDot(50, 75, dieID); // middle left
-      makeDot(25, 25, dieID); // bottom left
+      makeDot(70, 70, dieID); // bottom right
+      makeDot(45, 20, dieID); // middle right
+      makeDot(70, 20, dieID); // bottom right
+      makeDot(20, 70, dieID); // top left 
+      makeDot(45, 70, dieID); // middle left
+      makeDot(20, 20, dieID); // bottom left
     }
   }
 
