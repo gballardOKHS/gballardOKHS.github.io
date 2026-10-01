@@ -10,7 +10,7 @@ $(document).ready(function () {
   var boardWidth = $($board).width();
   var boardHeight = $($board).height();
   var ghosts = [];
-  var ghostRadius = 10;
+  var ghostRadius = 45;
   // modify these values if you want faster moving ghosts or a shorter countdown timer
   const FPS = 25;
   const initialDelay = 5000;
@@ -49,12 +49,13 @@ $(document).ready(function () {
     var $ghost = $(".ghost");
     // this gives the ghost object all of the data that it needs to store
     ghost.id = "#" + id;
-    ghost.x = (Math.random() * maxX + ghostRadius) < boardWidth;
-    ghost.y = (Math.random() * maxY + ghostRadius) < boardHeight;
+    ghost.x = (Math.random() * maxX + ghostRadius);
+    ghost.y = (Math.random() * maxY + ghostRadius);
     ghost.speedX = decideSpeed();
     ghost.speedY = decideSpeed();
-    ghost.width = 50
-    ghost.height = 50
+    // Width and height are hard coded manualy chance if css is changed //
+    ghost.width = 50;
+    ghost.height = 50;
     ghost.rightX = ghost.x + ghost.width;
     ghost.bottomY = ghost.y + ghost.height;
     // assign a random color for the ghost's glow
@@ -94,7 +95,6 @@ $(document).ready(function () {
       .css("left", ghost.x)
       .css("top", ghost.y)
       .addClass("ghost");
-
     // this inserts the ghost's HTML into your website
     $ghost.appendTo($board);
   }
