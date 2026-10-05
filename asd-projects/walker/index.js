@@ -70,7 +70,6 @@ function runProgram(){
 
     redrawGameItem();
     
-    
   }
   
   /* 
@@ -82,6 +81,8 @@ function runProgram(){
 
   // This function handles what happens when a certain key is pressed down
   function handleKeyDown(event) {
+
+    //code to control walker
     if (event.which === KEY.LEFT) {
       walker.speedX = -5
     } else if (event.which === KEY.UP) {
@@ -92,6 +93,7 @@ function runProgram(){
       walker.speedY = 5
     } 
 
+    //code to control walker2
     if (event.which === KEY.A) {
       walker2.speedX = -5
     } else if (event.which === KEY.W) {
@@ -101,9 +103,11 @@ function runProgram(){
     } else if (event.which === KEY.S) {
       walker2.speedY = 5
     } 
+    //console.log(event.which);
   }
 // This function handles ehat happens when a certain key is released
   function handleKeyUp(event) {
+    // code to control walker
     if (event.which === KEY.LEFT) {
       walker.speedX = 0
     } else if (event.which === KEY.UP) {
@@ -114,6 +118,7 @@ function runProgram(){
       walker.speedY = 0
     } 
 
+    // code to control walker2
     if (event.which === KEY.A) {
       walker2.speedX = 0
     } else if (event.which === KEY.W) {
@@ -123,6 +128,7 @@ function runProgram(){
     } else if (event.which === KEY.S) {
       walker2.speedY = 0
     } 
+    //console.log(event.which);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -150,6 +156,7 @@ function runProgram(){
     $("#walker").css("top", walker.y);
     $("#walker2").css("left", walker2.x);
     $("#walker2").css("top", walker2.y);
+    //console.log("Walker position:", walker.x, walker.y);
   }
 
   // This object keeps the walker from going bast the edge of the board
