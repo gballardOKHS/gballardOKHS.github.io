@@ -117,7 +117,7 @@ function runProgram(){
     } else if (event.which === KEY.DOWN) {
       walker.speedY = 0
     } 
-
+    
     // code to control walker2
     if (event.which === KEY.A) {
       walker2.speedX = 0
@@ -161,13 +161,12 @@ function runProgram(){
 
   // This object keeps the walker from going bast the edge of the board
   function wallCollisions() {
-  // hard coded change manually if css is changed //
-    walker.right = walker.x + 50;
-    walker.bottom = walker.y + 50;
+    walker.right = walker.x + $("#walker").width();
+    walker.bottom = walker.y + $("#walker").height();
     if (walker.bottom > $("#board").height()) {
       walker.y -= walker.speedY
     }
-
+    
     if (walker.right > $("#board").width()) {
       walker.x -= walker.speedX 
     }
@@ -179,9 +178,9 @@ function runProgram(){
     if (walker.x < 0) {
      walker.x -= walker.speedX 
     }
-  // hard coded change manually if css is changed // 
-    walker2.right = walker2.x + 50;
-    walker2.bottom = walker2.y + 50;
+  
+    walker2.right = walker2.x + $("#walker2").width();
+    walker2.bottom = walker2.y + $("#walker2").height();
     if (walker2.bottom > $("#board").height()) {
       walker2.y -= walker2.speedY
     }
