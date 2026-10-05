@@ -2,6 +2,7 @@
 
 $(document).ready(runProgram); // wait for the HTML / CSS elements of the page to fully load, then execute runProgram()
   
+// runs the entire program
 function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
@@ -11,7 +12,9 @@ function runProgram(){
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
-  // Game Item Objects
+  // Game Item Objects 
+  
+  // hold the data needed to make the walker move
   const walker = {
     x: 0,
     y: 0,
@@ -24,6 +27,8 @@ function runProgram(){
     speedX: 0,
     speedY: 0
   }
+
+  // holds the number values for certain keys on the keyboard
   const KEY = {
     LEFT: 37,
     UP: 38, 
@@ -44,6 +49,8 @@ function runProgram(){
 
   Note: You can have multiple event listeners for different types of events.
   */
+
+  // jQuery for the keyUp and keyDown functions
   $(document).on('keydown', handleKeyDown);                          
   $(document).on('keyup', handleKeyUp);
   ////////////////////////////////////////////////////////////////////////////////
@@ -54,6 +61,8 @@ function runProgram(){
   On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
   by calling this function and executing the code inside.
   */
+
+  // This function calls all of the helper functions to updates the frame shown on the screen
   function newFrame() {
     repositionGameItem();
     
@@ -70,6 +79,8 @@ function runProgram(){
   
   Note: You can have multiple event handlers for different types of events.
   */
+
+  // This function handles what happens when a certain key is pressed down
   function handleKeyDown(event) {
     if (event.which === KEY.LEFT) {
       walker.speedX = -5
@@ -91,7 +102,7 @@ function runProgram(){
       walker2.speedY = 5
     } 
   }
-
+// This function handles ehat happens when a certain key is released
   function handleKeyUp(event) {
     if (event.which === KEY.LEFT) {
       walker.speedX = 0
@@ -118,7 +129,7 @@ function runProgram(){
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
 
-  
+  // This function would end the game, however it is never called so it does nothing at this moment
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
@@ -126,14 +137,14 @@ function runProgram(){
     // turn off event handlers
     $(document).off();
   }
-  
+  // This function repositions the walkers x and y coordinates
   function repositionGameItem() {
     walker.x += walker.speedX;
     walker.y += walker.speedY;
     walker2.x += walker2.speedX;
     walker2.y += walker2.speedY;
   }
-
+// This function redraws the walker on the screen
   function redrawGameItem() {
     $("#walker").css("left", walker.x);
     $("#walker").css("top", walker.y);
@@ -141,6 +152,7 @@ function runProgram(){
     $("#walker2").css("top", walker2.y);
   }
 
+  // This object keeps the walker from going bast the edge of the board
   function wallCollisions() {
   // hard coded change manually if css is changed //
     walker.right = walker.x + 50;
