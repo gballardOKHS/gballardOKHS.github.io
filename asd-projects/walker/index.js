@@ -20,13 +20,13 @@ function runProgram(){
     y: 0,
     speedX: 0,
     speedY: 0
-  }
+  };
   const walker2 = {
     x: 0,
     y: 0,
     speedX: 0,
     speedY: 0
-  }
+  };
 
   // holds the number values for certain keys on the keyboard
   const KEY = {
@@ -38,7 +38,7 @@ function runProgram(){
     W: 87,
     D: 68,
     S: 83
-  }
+  };
   
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -84,24 +84,24 @@ function runProgram(){
 
     //code to control walker
     if (event.which === KEY.LEFT) {
-      walker.speedX = -5
+      walker.speedX = -5;
     } else if (event.which === KEY.UP) {
-      walker.speedY = -5
+      walker.speedY = -5;
     } else if (event.which === KEY.RIGHT) {
-      walker.speedX = 5
+      walker.speedX = 5;
     } else if (event.which === KEY.DOWN) {
-      walker.speedY = 5
+      walker.speedY = 5;
     } 
 
     //code to control walker2
     if (event.which === KEY.A) {
-      walker2.speedX = -5
+      walker2.speedX = -5;
     } else if (event.which === KEY.W) {
-      walker2.speedY = -5
+      walker2.speedY = -5;
     } else if (event.which === KEY.D) {
-      walker2.speedX = 5
+      walker2.speedX = 5;
     } else if (event.which === KEY.S) {
-      walker2.speedY = 5
+      walker2.speedY = 5;
     } 
     //console.log(event.which);
   }
@@ -163,38 +163,22 @@ function runProgram(){
   function wallCollisions() {
     walker.right = walker.x + $("#walker").width();
     walker.bottom = walker.y + $("#walker").height();
-    if (walker.bottom > $("#board").height()) {
+    if (walker.bottom > $("#board").height() || walker.y < 0) {
       walker.y -= walker.speedY
     }
     
-    if (walker.right > $("#board").width()) {
+    if (walker.right > $("#board").width() || walker.x < 0) {
       walker.x -= walker.speedX 
-    }
-
-    if (walker.y < 0) {
-      walker.y -= walker.speedY
-    }
-
-    if (walker.x < 0) {
-     walker.x -= walker.speedX 
     }
   
     walker2.right = walker2.x + $("#walker2").width();
     walker2.bottom = walker2.y + $("#walker2").height();
-    if (walker2.bottom > $("#board").height()) {
+    if (walker2.bottom > $("#board").height() || walker2.y < 0) {
       walker2.y -= walker2.speedY
     }
 
-    if (walker2.right > $("#board").width()) {
+    if (walker2.right > $("#board").width() || walker2.x < 0) {
       walker2.x -= walker2.speedX 
-    }
-
-    if (walker2.y < 0) {
-      walker2.y -= walker2.speedY
-    }
-
-    if (walker2.x < 0) {
-     walker2.x -= walker2.speedX 
     }
   }
 }
