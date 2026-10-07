@@ -109,24 +109,24 @@ function runProgram(){
   function handleKeyUp(event) {
     // code to control walker
     if (event.which === KEY.LEFT) {
-      walker.speedX = 0
+      walker.speedX = 0;
     } else if (event.which === KEY.UP) {
-      walker.speedY = 0
+      walker.speedY = 0;
     } else if (event.which === KEY.RIGHT) {
-      walker.speedX = 0
+      walker.speedX = 0;
     } else if (event.which === KEY.DOWN) {
-      walker.speedY = 0
+      walker.speedY = 0;
     } 
     
     // code to control walker2
     if (event.which === KEY.A) {
-      walker2.speedX = 0
+      walker2.speedX = 0;
     } else if (event.which === KEY.W) {
-      walker2.speedY = 0
+      walker2.speedY = 0;
     } else if (event.which === KEY.D) {
-      walker2.speedX = 0
+      walker2.speedX = 0;
     } else if (event.which === KEY.S) {
-      walker2.speedY = 0
+      walker2.speedY = 0;
     } 
     //console.log(event.which);
   }
@@ -164,21 +164,21 @@ function runProgram(){
     walker.right = walker.x + $("#walker").width();
     walker.bottom = walker.y + $("#walker").height();
     if (walker.bottom > $("#board").height() || walker.y < 0) {
-      walker.y -= walker.speedY
+      walker.y -= walker.speedY;
     }
     
     if (walker.right > $("#board").width() || walker.x < 0) {
-      walker.x -= walker.speedX 
+      walker.x -= walker.speedX;
     }
   
     walker2.right = walker2.x + $("#walker2").width();
     walker2.bottom = walker2.y + $("#walker2").height();
     if (walker2.bottom > $("#board").height() || walker2.y < 0) {
-      walker2.y -= walker2.speedY
+      walker2.y -= walker2.speedY;
     }
 
     if (walker2.right > $("#board").width() || walker2.x < 0) {
-      walker2.x -= walker2.speedX 
+      walker2.x -= walker2.speedX;
     }
   }
 }
