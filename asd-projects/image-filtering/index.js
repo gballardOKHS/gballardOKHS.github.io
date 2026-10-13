@@ -1,6 +1,6 @@
 // This is a small program. There are only two sections. This first section is what runs
 // as soon as the page loads.
-// This function applies and removes the filter 
+// This function applies and removes the filter
 // from the image after clicking on certain buttons
 $(document).ready(function () {
   render($("#display"), image);
@@ -54,7 +54,7 @@ function applyFilter(filterFunction) {
 }
 
 // TODO 9 Create the applyFilterNoBackground function
-// This function applies the chosen filter to all 
+// This function applies the chosen filter to all
 // of the pixels in the image except the background
 function applyFilterWithNoBackground(filterFunction) {
   var backgroundColor = image[0][0];
@@ -73,7 +73,7 @@ function applyFilterWithNoBackground(filterFunction) {
 }
 
 // TODO 6: Create the keepInBounds function
-// This function keeps the value of each color between 0, 
+// This function keeps the value of each color between 0,
 // and 255  so that it can still be used as an rgb value
 function keepInBounds(num) {
   return num < 0 ? 0 : num > 255 ? 255 : num;
@@ -97,7 +97,7 @@ function decreaseBlue(pixelArray) {
   pixelArray[BLUE] -= 50;
 }
 
-// This function increases the green value of each effected 
+// This function increases the green value of each effected
 // pixel by its blue value
 function increaseGreenByBlue(pixelArray) {
   pixelArray[GREEN] += pixelArray[BLUE];
@@ -110,4 +110,7 @@ function invertColor(pixelArray) {
   pixelArray[RED] = 255 - pixelArray[RED];
   pixelArray[GREEN] = 255 - pixelArray[GREEN];
   pixelArray[BLUE] = 255 - pixelArray[BLUE];
+  keepInBounds(pixelArray[RED]);
+  keepInBounds(pixelArray[GREEN]);
+  keepInBounds(pixelArray[BLUE]);
 }
