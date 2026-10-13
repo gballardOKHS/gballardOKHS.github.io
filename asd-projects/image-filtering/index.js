@@ -95,6 +95,7 @@ function reddify(pixelArray) {
 // This function decreases the blue value of every effected pixel by 50
 function decreaseBlue(pixelArray) {
   pixelArray[BLUE] -= 50;
+  keepInBounds(pixelArray[BLUE]);
 }
 
 // This function increases the green value of each effected
