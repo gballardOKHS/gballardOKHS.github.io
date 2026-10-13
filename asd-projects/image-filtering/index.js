@@ -23,8 +23,8 @@ function resetAndRender() {
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
   applyFilter(reddify);
-  applyFilter(decreaseBlue);
-  applyFilterWithNoBackground(increaseGreenByBlue);
+  applyFilter(increaseGreenByBlue);
+  applyFilterWithNoBackground(decreaseBlue);
   applyFilterWithNoBackground(invertColor);
   // do not change the below line of code
   render($("#display"), image);
