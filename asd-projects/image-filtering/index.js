@@ -23,8 +23,9 @@ function resetAndRender() {
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
   applyFilter(reddify);
-  applyFilter(increaseGreenByBlue);
-  applyFilterWithNoBackground(decreaseBlue);
+  applyFilter(decreaseBlue);
+  applyFilterWithNoBackground(increaseGreenByBlue);
+  applyFilter(greyScale);
   applyFilterWithNoBackground(invertColor);
   // do not change the below line of code
   render($("#display"), image);
@@ -107,6 +108,15 @@ function increaseGreenByBlue(pixelArray) {
 // CHALLENGE code goes below here
 
 // This function inverts the color of each effected pixel
+function greyScale(pixelArray) {
+  pixelArray[RED] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  pixelArray[GREEN] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  pixelArray[BLUE] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  keepInBounds(pixelArray[RED]);
+  keepInBounds(pixelArray[GREEN]);
+  keepInBounds(pixelArray[BLUE]);
+}
+
 function invertColor(pixelArray) {
   pixelArray[RED] = 255 - pixelArray[RED];
   pixelArray[GREEN] = 255 - pixelArray[GREEN];
@@ -115,3 +125,4 @@ function invertColor(pixelArray) {
   keepInBounds(pixelArray[GREEN]);
   keepInBounds(pixelArray[BLUE]);
 }
+
