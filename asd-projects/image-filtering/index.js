@@ -26,6 +26,7 @@ function applyAndRender() {
   applyFilter(decreaseBlue);
   applyFilterWithNoBackground(increaseGreenByBlue);
   applyFilter(greyScale);
+  applyFilterWithNoBackground(reddify);
   applyFilterWithNoBackground(invertColor);
   // do not change the below line of code
   render($("#display"), image);
