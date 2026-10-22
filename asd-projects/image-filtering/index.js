@@ -108,7 +108,7 @@ function increaseGreenByBlue(pixelArray) {
 }
 // CHALLENGE code goes below here
 
-// This function inverts the color of each effected pixel
+// This function reassigns a pixels rgb values to the mean of all three color values
 function greyScale(pixelArray) {
   pixelArray[RED] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
   pixelArray[GREEN] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
@@ -118,6 +118,7 @@ function greyScale(pixelArray) {
   keepInBounds(pixelArray[BLUE]);
 }
 
+// This function inverts the color of each effected pixel
 function invertColor(pixelArray) {
   pixelArray[RED] = 255 - pixelArray[RED];
   pixelArray[GREEN] = 255 - pixelArray[GREEN];
