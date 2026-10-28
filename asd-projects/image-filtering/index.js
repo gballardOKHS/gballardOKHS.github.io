@@ -96,23 +96,26 @@ function reddify(pixelArray) {
 // TODO 7 & 8: Create more filter functions
 // This function decreases the blue value of every effected pixel by 50
 function decreaseBlue(pixelArray) {
-  pixelArray[BLUE] -= 50;
-  keepInBounds(pixelArray[BLUE]);
+  pixelArray[BLUE] - 50;
+  pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
 }
 
 // This function increases the green value of each effected
 // pixel by its blue value
 function increaseGreenByBlue(pixelArray) {
   pixelArray[GREEN] += pixelArray[BLUE];
-  keepInBounds(pixelArray[GREEN]);
+  pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
 }
 // CHALLENGE code goes below here
 
 // This function reassigns a pixels rgb values to the mean of all three color values
 function greyScale(pixelArray) {
-  pixelArray[RED] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
-  pixelArray[GREEN] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
-  pixelArray[BLUE] = (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  pixelArray[RED] =
+    (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  pixelArray[GREEN] =
+    (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
+  pixelArray[BLUE] =
+    (pixelArray[RED] + pixelArray[GREEN] + pixelArray[BLUE]) / 3;
   keepInBounds(pixelArray[RED]);
   keepInBounds(pixelArray[GREEN]);
   keepInBounds(pixelArray[BLUE]);
@@ -127,4 +130,3 @@ function invertColor(pixelArray) {
   keepInBounds(pixelArray[GREEN]);
   keepInBounds(pixelArray[BLUE]);
 }
-
