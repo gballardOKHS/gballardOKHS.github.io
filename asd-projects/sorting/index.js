@@ -6,14 +6,15 @@ The CSS ids you will work with are:
 
 1. bubbleCounter -- the container for the counter text for bubble sort
 2. quickCounter  -- the container for the counter text for quick sort
-
 */
-
+const bubbleCounter = "#bubbleCounter";
+const quickCounter = "#quickCounter";
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES BELOW HERE /////////////////////
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
+// sorts throught values using a bubble sort
 async function bubbleSort(array) {
   for (var i = 0; i <= array.length - 1; i++) {
     for (var j = array.length - 1; j >= i + 1; j--) {
@@ -27,6 +28,7 @@ async function bubbleSort(array) {
 }
 
 // TODO 3: Implement quickSort
+// sorts throught values using a quick sort
 async function quickSort(array, left, right) {
   if (right - left > 0) {
     var index = await partition(array, left, right);
@@ -40,6 +42,7 @@ async function quickSort(array, left, right) {
 }
 
 // TODOs 4 & 5: Implement partition
+// creates a partition for quickSort to use when sorting
 async function partition(array, left, right) {
   var pivot = array[Math.floor((right + left) / 2)].value;
   while (left < right) {
@@ -59,6 +62,7 @@ async function partition(array, left, right) {
 }
 
 // TODO 1: Implement swap
+// swaps two values in an array
 function swap(array, i, j) {
   [array[i], array[j]] = [array[j], array[i]];
   drawSwap(array, i, j);
