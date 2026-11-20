@@ -30,15 +30,15 @@ function generateLevel() {
 function create(obj) {
   // TODO 4: Create a game object based on its type and kind
   if (obj.type === "obstacle") {
-    makeObstacle();
+    makeObstacle(obj);
   } else if (obj.type === "enemy") {
-    makeEnemy();
+    makeEnemy(obj);
   } else if (obj.type === "powerup") {
-    makePowerup();
+    makePowerup(obj);
   } else if (obj.type === "goal") {
-    makeGoal();
+    makeGoal(obj);
   } else if (obj.type === "platform") {
-    makePlatform();
+    makePlatform(obj);
   }
 }
 
@@ -46,7 +46,7 @@ function filterObjects(type) {
   // TODO 5: Return only the game objects of the specified type
   var matches = [];
   for (var i = 0; i < gameObjects.length; i++) {
-    if (type === obj.type) {
+    if (type === gameObjects.type) {
       matches.push(i);
     }
   }
@@ -55,7 +55,10 @@ function filterObjects(type) {
 
 function moveGameObjects(objectList) {
   // TODO 6: Move all game objects of a single type based on speeds
-  
+  for (let i = 0; i < objectList.length; i++) {
+    var currentObj = objectList[i];
+    
+  }
 }
 
 function handleProjectileCollisions() {

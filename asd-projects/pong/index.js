@@ -41,7 +41,15 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+  function Paddle(paddleId) {
+    const paddleInstance = {};
+    paddleInstance.id = paddleId;
+    paddleInstance.height = $(paddleId).height();
+    paddleInstance.width = $(paddleId).width();
+    paddleInstance.x = parseFloat($(paddleId).css("left"));
+    paddleInstance.y = parseFloat($(paddleId).css)
+    return paddleInstance;
+  }
   
   function endGame() {
     // stop the interval timer

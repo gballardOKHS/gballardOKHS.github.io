@@ -7,8 +7,7 @@ The CSS ids you will work with are:
 1. bubbleCounter -- the container for the counter text for bubble sort
 2. quickCounter  -- the container for the counter text for quick sort
 */
-const bubbleCounter = "#bubbleCounter";
-const quickCounter = "#quickCounter";
+
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES BELOW HERE /////////////////////
 ///////////////////////////////////////////////////////////////////////
